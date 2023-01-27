@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript_Tutorial_2</title>
+</head>
+<body>
+	  <!-- <button id ="button" onclick="hello()" >click</button>
+	    <p ondblclick="hello()">Double click on me...!</p> -->
+	<script>
+		// let name=null;
+// document.write(typeof(name));
+// ------Difference between var, let, const-----
+// var-->we can declare as well as assign again.
+// var name="Ameer";
+// document.write(name);
+// var name="Aamir";// we are declare and assign value again 
+// document.write(name);
+// let --> we can declare but not assign value again.
+// let name="Ameer"; 
+//  name="Aamir";// we are assigning new value 
+// document.write(name);
+//const--> we can nither declare nor assign value again. 
+// const name="Ameer"; 
+ // name="Aamir";// we can not assigning new value.
+// document.write(name);
+// str.match(/l/g)---> this will finds and print that...
+// var str="hello world..!"
+// var strs="hello world..!"
+// document.swrite(str.replace(/l/g, "r")); 
+// slice(-2)--> this takes last two characters of a string.
+// document.write(str.slice(-3));
+// -----------------comparison Operator-----------------
+/*
+1. == (equal to)
+2. === (equal value and type) 
+3. != (Not equal)
+4. !== (Not equal value and type) 
+5. > (greater)
+6. < (less)
+7. >= (greater or equal)
+8. <= (less or equal) 
+var value1=3;
+var value2=3;
+document.write(value1!==value2);
+*/
+//---------Function v/s Arrow Function---------------
+//1--------> Normal Function
+// function hello(){
+// 	document.write("Hello");
+// } 
+// hello();
+// let hello=function(){
+// 	document.write("Hello");
+// }
+// hello();
+// 2-------->Arrow Function
+// let hello = (name,age) =>{ document.write("Hello"+name+age);
+// }
+// hello("Ameer", 19);
+// ------------Event and handling Events-------------
+// NOTE: Event can be used in any tag of HTML (button, paragraph, image etc...)
+// NOTE: onkeypress work in bod tag.
+// function hello(){
+// 	document.write("Hello Everyone");
+// } 
+// hello(); 
+// ----------------Javascript with console-----------------
+/*
+var x=4;
+console.table([1,2,3]);
+console.error("something went wrong");
+console.warn("This is just warrning..!");
+console.time("Test");
+console.error("something went wrong");
+console.warn("This is just warrning..!");
+console.error("something went wrong");
+console.warn("This is just warrning..!");
+console.error("something went wrong");
+console.warn("This is just warrning..!");
+console.error("something went wrong");
+console.warn("This is just warrning..!");
+console.error("something went wrong");
+console.warn("This is just warrning..!");
+console.timeEnd("Test");
+// console.clear();
+*/
+// --------ternary Operator-------------
+// var value1=5, value2=3;
+// (value1==value2)? document.write("both are equal"):document.write("both are not equal");
+
+// -------------------confirm Box-------------------
+/* alert("Well come on our websit..!");
+ var a= confirm("Do you want learn Javascript language");
+ if (a) {
+ alert("watch Javascript tutorial on Youtube");
+ }else{
+alert("You may not watch Javascript tutorial on Youtube");
+ }
+ */
+ // 1.Simple Function(code reuseability)
+ /*function dialogue(){
+ 	document.write("hey, how are you");
+ }
+ dialogue();
+ document.write(" Ameer"+"<br/>");
+dialogue();
+ document.write(" Hakim"+"<br/>");
+dialogue();
+ document.write(" Adam"+"<br/>");
+dialogue();
+ document.write(" Saib"+"<br/>");
+*/
+// 2.Parameter Funtion (working same but value change)
+/*
+function claculator(a,b){
+	document.write("Addition: "+(a+b)+"<br/>");
+	document.write("Subtraction: "+(a-b)+"<br/>");
+	document.write("Multiplication: "+(a*b)+"<br/>");
+	document.write("Division: "+(a/b)+"<br/>");
+	}
+	claculator(2,4);
+	document.write("-----------------------"+"<br/>");
+	claculator(2,10);
+		document.write("-----------------------"+"<br/>");
+	claculator(2,20);
+		document.write("-----------------------"+"<br/>");
+	claculator(2,0);
+    */
+    // 3.Function With Return Value (We don't want print as in simple/parameter function but we want to reuse it)
+   /* function returnFunction(a,b){
+	var add=(a+b);
+	return add; 
+	}
+// returnFunction(2,6);
+var print=returnFunction(2,8);
+document.write(print);
+// -------------percentage program----------
+function sum(maths, english, programming){
+	var add=maths+english+programming;
+	return (add/300)*100; 
+	}
+var per=sum(40,80, 80);
+document.write(per);
+*/
+// ----------printing Even/Odd Numbers by using for loop----------
+
+// for (var i = 0; i <=100; i++) {
+// 	if (i%2!=0) {
+// 		document.write(i+"<br/>");
+// 	}	
+// }
+// var arr=["Ameer","Hakim","Adam","Saqib"];//method-1
+// document.write("<ol>");
+// for (var i = 0; i < arr.length; i++) {
+// 	document.write("<li>"+arr[i]+"</li>");
+// }
+// document.write("</ol>");
+  // method-2
+  /*var ar=new Array(4);
+  for (var i = 0; i < 4; i++) {
+  	ar[i]=prompt("Enter your Name and Your Room Mates:");
+  }
+  document.write("Names of students allowted in Room:133"+"<br/>")
+  document.write("<ol>");
+for (var j = 0; j < 4; j++) {
+	document.write("<li>"+ar[j]+"</li>");
+}
+document.write("</ol>");
+*/
+// ------Multidimensional Array (table of records)--------------
+/*var arr =[
+["Ameer", "K20SW004", "Software", "MUET-SZAB"],
+["Hakim", "K20ce009", "civil", "MUET-SZAB"],
+["Zahir", "K20ce008", "civil", "MUET-SZAB"],
+["Saqib", "K20EL088", "Electrical", "MUET-SZAB"]
+];
+// document.write(arr);
+// NOTE: if we are using double qoute outer than inner must be sing qoute.
+document.write("<table border='2px' cellspacing='0'>" );
+for (var i = 0; i < arr.length; i++) {
+	document.write("</tr>");
+	for (var j = 0; j < arr[i].length; j++) {
+	document.write("<td>"+arr[i][j]+"</td>");
+}
+document.write("<br>");
+}
+document.write("<tr>");
+document.write("</table>");
+*/
+// ---------------Arrays Methods/Function-----------
+var arr=["Ameer", "Zahir", "Saqib", "Hakim"];
+document.write(arr+"<br>");
+// arr.sort();// sort the given array.
+// document.write(arr+"<br>");
+// arr.reverse();// Reverse the values given in array.
+// document.write(arr+"<br>");
+//  arr.push("Sahil","Hasnain","Awais");//we can add one or more value in given array in last.
+// document.write(arr+"<br>");
+// arr.pop("Hakim"); // remove value from given array in last.
+// document.write(arr+"<br>");
+// arr.shift();// remve a value in given array in first.
+// document.write(arr+"<br>");
+// arr.unshift("Sahil","Ameer", "Hasnain"); //we can add one or more value from given array in first.
+// document.write(arr+"<br>");
+	</script>
+</body>
+</html>
